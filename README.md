@@ -1,15 +1,15 @@
 K-Means clustering in Sklearn for Clustering - Base problem category as per Ready Tensor specifications.
 
+- k-means
+- clustering
 - sklearn
 - python
 - pandas
 - numpy
-- scikit-optimize
 - flask
 - nginx
 - uvicorn
 - docker
-- clustering
 
 This is a Clustering Model that uses k-means implemented through Sklearn.
 
