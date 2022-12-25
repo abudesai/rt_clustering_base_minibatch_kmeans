@@ -55,7 +55,7 @@ local_datapath = "./../../datasets"
 
 model_name = clustering.MODEL_NAME
 
-prediction_col = "inference"  # this is a hard_coded target field mandated by our specs
+prediction_col = "prediction"  # this is a hard_coded target field mandated by our specs
 target_field = "__target__"  # this is a hard_coded internal field
 
 

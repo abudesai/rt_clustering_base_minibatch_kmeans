@@ -1,20 +1,13 @@
 #!/usr/bin/env python
 
 import os, warnings, sys
-import pprint
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"  # or any {'0', '1', '2'}
 warnings.filterwarnings("ignore")
 
-import numpy as np, pandas as pd
-from sklearn.model_selection import KFold, train_test_split
-from sklearn.cluster import KMeans
-
 import algorithm.preprocessing.pipeline as pp_pipe
 import algorithm.preprocessing.preprocess_utils as pp_utils
 import algorithm.utils as utils
-
-# import algorithm.scoring as scoring
 from algorithm.model.clustering import ClusteringModel as Model
 from algorithm.utils import get_model_config
 
