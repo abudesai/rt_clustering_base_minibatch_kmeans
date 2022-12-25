@@ -31,26 +31,21 @@ class ClusteringModel:
         )
         return model
 
-    def __getattr__(self, name):
-        # https://github.com/faif/python-patterns
-        # model.predict() instead of model.model.predict()
-        # same for fit(), transform(), fit_transform(), etc.
-        attr = getattr(self.model, name)
+    def fit(self, *args, **kwargs):
+        return self.model.fit(*args, **kwargs)
 
-        if not callable(attr):
-            return attr
+    def predict(self, *args, **kwargs):
+        return self.model.predict(*args, **kwargs)
 
-        def wrapper(*args, **kwargs):
-            return getattr(self.model, attr.__name__)(*args, **kwargs)
-
-        return wrapper
+    def transform(self, *args, **kwargs):
+        return self.model.transform(*args, **kwargs)
 
     def evaluate(self, x_test):
         """Evaluate the model and return the loss and metrics"""
         raise NotImplementedError
 
     def save(self, model_path):
-        joblib.dump(self.model, os.path.join(model_path, model_fname))
+        joblib.dump(self, os.path.join(model_path, model_fname))
 
     @classmethod
     def load(cls, model_path):
