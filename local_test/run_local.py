@@ -96,7 +96,7 @@ def copy_example_files(dataset_name):
     # data
     shutil.copyfile(
         f"{local_datapath}/{dataset_name}/{dataset_name}.csv",
-        os.path.join(data_path, f"{dataset_name}_test.csv"),
+        os.path.join(data_path, f"{dataset_name}.csv"),
     )
 
 
@@ -289,7 +289,6 @@ def reduce_dims(X):
 
 def run_train_and_test(dataset_name):
     start = time.time()
-
     create_ml_vol()  # create the directory which imitates the bind mount on container
     copy_example_files(dataset_name)  # copy the required files for model training
     results, chart_data = train_and_predict()  # train and predict
