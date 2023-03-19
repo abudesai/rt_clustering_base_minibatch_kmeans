@@ -5,14 +5,5 @@
       "STANDARD_SCALER": "standard_scaler",
       "X_SELECTOR": "x_selector"
     }
-  },
-  "data_schema_keys": {
-    "attributes": "attributes",
-    "id_field": "idField",
-    "target_attr_name": "targetField",
-    "categorical": "CATEGORICAL",
-    "numeric": "NUMERIC",
-    "attr_type": "attributeType",
-    "attr_name": "attributeName"
   }
 }
